@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Grand Theft Auto - Mission Pack 1 - London 1969"
+id = "SLES-01714"
+players = 1
+exe = "disc/SLES_017.14"
+disc = "disc/Grand Theft Auto - Mission Pack 1 - London 1969 (Europe) (En,De,It).cue"
+discs = ["disc/Grand Theft Auto - Mission Pack 1 - London 1969 (Europe) (En,De,It).cue"]
+disc_serials = ["SLES-01714"]
+load_address = "0x80180000"
+entry_pc = "0x80183BF0"
+text_size = "0x0004F800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Grand Theft Auto - Mission Pack 1 - London 1969 (Europe) (En,De,It) (Track 1).bin"
+cue_name = "Grand Theft Auto - Mission Pack 1 - London 1969 (Europe) (En,De,It).cue"
+boot_exe = "SLES_017.14"
+known_sizes = [43234464]
+known_md5 = [
+  "d6f6f5315b73a6d4612933ce40535585",
+]
+known_sha1 = [
+  "69dbf1e460e54aeadcddaecc4fbb6de8bf75dbe1",
+]
+known_crc32 = [
+  "79ee2bb3",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Grand Theft Auto - Mission Pack 1 - London 1969 Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 16
+required_disc_fp = "20c53e05a319904fa8809f0628059aa3e970d07408834026abf2f1dece72bff0"

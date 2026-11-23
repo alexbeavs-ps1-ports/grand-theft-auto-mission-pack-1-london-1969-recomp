@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Grand Theft Auto - Mission Pack 1 - London 1969",
+    "id": "SLES-01714",
+    "boot_exe": "SLES_017.14"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "Europe",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Grand Theft Auto - Mission Pack 1 - London 1969 (Europe) (En,De,It).cue",
+    "bin_name": "Grand Theft Auto - Mission Pack 1 - London 1969 (Europe) (En,De,It) (Track 1).bin",
+    "track_counts": [
+      16
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 43234464,
+      "md5": "d6f6f5315b73a6d4612933ce40535585",
+      "sha1": "69dbf1e460e54aeadcddaecc4fbb6de8bf75dbe1",
+      "crc32": "79ee2bb3"
+    },
+    "disc_fp": "20c53e05a319904fa8809f0628059aa3e970d07408834026abf2f1dece72bff0"
+  },
+  "exe": {
+    "load_address": "0x80180000",
+    "entry_pc": "0x80183BF0",
+    "text_size": "0x0004F800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 216,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

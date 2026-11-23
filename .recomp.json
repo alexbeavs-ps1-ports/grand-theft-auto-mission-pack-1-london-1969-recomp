@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Grand Theft Auto - Mission Pack 1 - London 1969",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "grand-theft-auto-mission-pack-1-london-1969-recomp",
+  "original": {
+    "region": "Europe",
+    "serial": "SLES-01714"
+  }
+}
